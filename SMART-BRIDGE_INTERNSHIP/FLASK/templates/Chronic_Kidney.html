@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<style>
+			body 
+			{
+				background-image:url("https://drugdiscoverytrends.com/wp-content/uploads/2019/10/190416-kidney.jpg");
+				background-blend-mode: lighten;
+				height: 500px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				position: relative;
+
+			}
+		</style>
+	</head>
+
+	<body bgcolor = "blue" text = "purple">
+		<form action="{{ url_for('y_predict')}}" method = "POST">
+			<table border = "0" align = "center">
+				<tr>
+					<th colspan = "6" align = "center"><b><font color = "purple" size = "20"> Predicting Chronic Kidney Disease</font></b></th>
+				</tr>
+				<tr>
+                                        <td><b> AGE</b></td>
+					<td><input type = "text" name = "AGE"/></td>
+					<td><b> BP</b></td>
+					<td><input type = "text" name = "BP"/></td>
+					<td><b> SG</b></td>
+					<td><input type = "text" name = "SG"/></td>
+				</tr>
+				<tr>
+                                        <td><b> AL</b></td>
+					<td><input type = "text" name = "AL"/></td>
+					<td><b>SU</b></td>
+					<td><input type = "text" name = "SU"/></td>
+					<td> <b>RBC</b></td>
+					<td><input type = "text" name = "RBC"/></td>
+				</tr>
+				<tr>
+                                        <td><b> PC</b></td>
+					<td><input type = "text" name = "PC"/></td>
+					<td><b> PCC</b></td>
+					<td><input type = "text" name = "PCC"/></td>
+					<td><b> BA</b></td>
+					<td><input type = "text" name = "BA"/></td>
+				</tr>
+				<tr>
+                                        <td><b> BGR</b></td>
+					<td><input type = "text" name = "BGR"/></td>
+					<td><b> BU</b></td>
+					<td><input type = "text" name = "BU"/></td>
+					<td> <b>SC</b></td>
+					<td><input type = "text" name = "SC"/></td>
+					
+				</tr>
+				<tr>
+                                        <td><b> SOD</b></td>
+					<td><input type = "text" name = "SOD"/></td>
+					<td><b> POT</b></td>
+					<td><input type = "text" name = "POT"/></td>
+					<td><b> HEMO</b></td>
+					<td><input type = "text" name = "HEMO"/></td>
+					
+				</tr>
+				<tr>
+                                        <td><b> PCV</b></td>
+					<td><input type = "text" name = "PCV"/></td>
+					<td><b> WC</b></td>
+					<td><input type = "text" name = "WC"/></td>
+					<td><b> RC</b></td>
+					<td><input type = "text" name = "RC"/></td>
+					
+				</tr>
+				<tr>
+                                        <td><b> HTN</b></td>
+					<td><input type = "text" name = "HTN"/></td>
+					<td><b> DM</b></td>
+					<td><input type = "text" name = "DM"/></td>
+					<td><b> CAD</b></td>
+					<td><input type = "text" name = "CAD"/></td>
+					
+				</tr>
+				<tr>
+                                        <td> <b>APPET</b></td>
+					<td><input type = "text" name = "APPET"/></td>
+					<td><b>PE</b></td>
+					<td><input type = "text" name = "PE"/></td>
+                                        <td><b>ANE</b></td>
+					<td><input type = "text" name = "ANE"/></td>
+					
+				</tr>
+				<tr>
+					<th colspan = 6"><input type = "submit" value= "PREDICT"/><th>
+				</tr>
+				
+			</table>
+		</form>
+		<center><b><font size=30>{{ prediction_text }}</font></b></center>
+	</body>
+</html>
